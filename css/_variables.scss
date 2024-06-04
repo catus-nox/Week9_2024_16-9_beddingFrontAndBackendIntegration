@@ -1,0 +1,24 @@
+$gutter:30px;
+$grid-col-width:86px;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+);
+
+$red:#C72424;
+$purple1:#6A33FF;
+$purple2:#301E5F;
+$gray0 :#797979;
+$gray1 : #CED4DA;

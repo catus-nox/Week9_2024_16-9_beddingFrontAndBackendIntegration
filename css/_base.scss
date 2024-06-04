@@ -1,0 +1,65 @@
+@use "sass:map";
+
+
+body {
+ * {
+  font-size: 16px;
+  color: black;
+  font-weight: normal;
+  font-family: "Noto Sans TC", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  line-height: 1.5;
+ }
+}
+img {
+ max-width: 100%;
+ display: block;
+}
+
+
+@for $i from 1 through 6 {
+ h#{$i} {
+  line-height: 1.2;
+ }
+}
+
+.container {
+ max-width: 100%;
+ padding-left: calc(1rem);
+ padding-right: calc(1rem);
+ margin-left: auto;
+ margin-right: auto;
+
+ @each $grid-breakpoint,
+ $container-max-width in $container-max-widths {
+  @media (min-width: map.get($grid-breakpoints, $grid-breakpoint)) {
+   max-width: $container-max-width;
+  }
+ }
+ @include sm{
+  padding-left: 0;
+  padding-right: 0;
+ }
+}
+
+// @include lg {
+
+//  /*
+//  .col-lg-1 {
+//   width: 86px * 1 + $gutter *0;
+//  }
+//  .col-lg-2 {
+//   width: 86px*2 + $gutter *1;
+//  }
+//  .col-lg-3 {
+//   width: 86px*3 + $gutter * 2;
+//  }
+//  */
+//  @for $i from 1 through 12 {
+//   .col-lg-#{$i} {
+//    width: $grid-col-width* $i + $gutter * ($i - 1);
+//   }
+//  }
+// }
+

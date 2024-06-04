@@ -1,0 +1,32 @@
+@use "sass:map";
+
+@mixin sm {
+ @media (max-width:map.get($grid-breakpoints,"sm")) {
+  @content;
+ }
+}
+
+@mixin md {
+ @media (max-width:map.get($grid-breakpoints,"md")) {
+  @content;
+ }
+}
+
+@mixin lg {
+ @media (max-width:map.get($grid-breakpoints,"lg")) {
+  @content;
+ }
+}
+
+@mixin xl {
+ @media (max-width:map.get($grid-breakpoints,"xl")) {
+  @content;
+ }
+}
+
+@mixin xxl {
+ @media (max-width:map.get($grid-breakpoints,"xxl")) {
+  @content;
+ }
+}
+
